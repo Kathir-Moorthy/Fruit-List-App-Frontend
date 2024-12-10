@@ -22,7 +22,7 @@ function RecycleBin() {
   const restoreItem = async (index) => {
     const itemName = recycleBin[index].fruit; // Extract fruit name
     try {
-      await axios.post("https://fruit-list-app-backend.onrender.com//recyclebin/restore", { index });
+      await axios.post("https://fruit-list-app-backend.onrender.com/recyclebin/restore", { index });
       fetchRecycleBin();
       toast.success(`"${itemName}" restored to the fruit list!`);
     } catch (error) {
@@ -33,7 +33,7 @@ function RecycleBin() {
   const deleteItemPermanently = async (index) => {
     const itemName = recycleBin[index].fruit; // Extract fruit name
     try {
-      await axios.delete("https://fruit-list-app-backend.onrender.com//recyclebin", { data: { index } });
+      await axios.delete("https://fruit-list-app-backend.onrender.com/recyclebin", { data: { index } });
       fetchRecycleBin();
       toast.success(`"${itemName}" permanently deleted!`);
     } catch (error) {
