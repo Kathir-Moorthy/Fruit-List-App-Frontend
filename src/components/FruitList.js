@@ -26,7 +26,7 @@ function FruitList() {
       return;
     }
     try {
-      await axios.post("http://localhost:5000/fruits", { fruit });
+      await axios.post("https://fruit-list-app-backend.onrender.com/fruits", { fruit });
       setFruit("");
       fetchData();
       toast.success(`"${fruit}" added to the list!`);
@@ -38,7 +38,7 @@ function FruitList() {
   const deleteFruit = async (index) => {
     const fruitName = fruitList[index].fruit; // Extract fruit name
     try {
-      await axios.delete("http://localhost:5000/fruits", { data: { index } });
+      await axios.delete("https://fruit-list-app-backend.onrender.com/fruits", { data: { index } });
       fetchData();
       toast.success(`"${fruitName}" moved to the recycle bin!`);
     } catch (error) {
