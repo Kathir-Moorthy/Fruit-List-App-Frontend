@@ -1,0 +1,150 @@
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container styling */
+.recyclebin-container {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 600px;
+    background: linear-gradient(135deg, #f0f4ff, #e3ebfa);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Heading styling */
+.recyclebin-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* List and item styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Item name styling */
+li span {
+    flex-grow: 1;
+    font-size: 16px;
+    text-align: left;
+    color: #333;
+}
+
+/* Button styling */
+li button {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-left: 10px;
+}
+
+li button:hover {
+    background: #d9534f;
+    transform: scale(1.05);
+}
+
+/* Action buttons (e.g., Empty Recycle Bin) */
+.recyclebin-actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.recyclebin-actions button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #d74540;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.recyclebin-actions button:hover {
+    background: #e45b57;
+    transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .recyclebin-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    li {
+        flex-wrap: nowrap;
+        gap: 5px;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    li span {
+        font-size: 14px;
+    }
+
+    li button {
+        padding: 6px 10px;
+        font-size: 13px;
+    }
+
+    .recyclebin-actions button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .recyclebin-container {
+        padding: 10px;
+    }
+
+    li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    li span {
+        margin-bottom: 5px;
+    }
+
+    li button {
+        align-self: flex-end;
+        padding: 6px 8px;
+    }
+}
