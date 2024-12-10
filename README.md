@@ -10,9 +10,7 @@ A responsive and modern Fruit List application built with React. The app allows 
 - **Fruit List**: View, search, and filter fruits.
 - **Recycle Bin**: Restore deleted fruits.
 - **Responsive Design**: Works seamlessly on all screen sizes.
-- **Light/Dark Mode**: Toggle between light and dark themes.
 - **Interactive UI**: Smooth hover effects, animations, and transitions.
-- **Pagination & Search**: Easily navigate through large datasets.
 - **Export Options**: Export the fruit list to CSV/PDF.
 - **Multi-language Support**: Interface available in multiple languages.
 
